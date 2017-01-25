@@ -1,0 +1,26 @@
+---
+# tasks file for create-db-user
+- include_vars: secure.yml
+
+- name: Create a new database
+  mysql_db:
+    name: "{{ item.value.name }}"
+    state: present
+    login_host: localhost
+    login_port: "{{ mysql_port }}"
+    login_user: "{{ mysql_root }}"
+    login_password: "{{ mysql_root_pass }}"
+  with_dict: "{{ databases }}"
+
+- name: Create user and grant privileges for database
+  mysql_user:
+    name: "{{ item.value.user }}"
+    host: "{{ item.value.userhost }}"
+    password: "{{ item.value.password }}"
+    priv: '{{ item.value.name }}.*:ALL'
+    state: present
+    login_host: localhost
+    login_port: "{{ mysql_port }}"
+    login_user: "{{ mysql_root }}"
+    login_password: "{{ mysql_root_pass }}"
+  with_dict: "{{ databases }}"

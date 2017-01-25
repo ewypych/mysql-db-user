@@ -1,0 +1,4 @@
+---
+# defaults file for create-db-user
+mysql_root: "root"
+mysql_port: 3306

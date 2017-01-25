@@ -1,0 +1,13 @@
+---
+# vars file for create-db-user
+databases:
+  testowadb:
+    name: testdb
+    user: adm_test
+    userhost: localhost
+    password: "{{ db_pass_test }}"
+  seconddb:
+    name: seconddb
+    user: adm_second
+    userhost: localhost
+    password: "{{ db_pass_second }}"
