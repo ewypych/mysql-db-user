@@ -4,17 +4,21 @@ galaxy_info:
 
   license: MIT
 
-  min_ansible_version: 1.2
-
-  - name: Fedora
+  min_ansible_version: 1.9
+  platforms:
+  - name: EL
     versions:
-    - 21
-    - 22
-    - 23
-    - 24
-    - 25
-  - name: CentOS
-    versions:
+    - 6
     - 7
+  - name: Debian
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - xenial
+  galaxy_tags:
+    - mysql
+    - database
+    - users
 
 dependencies: []

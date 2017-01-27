@@ -1,4 +1,4 @@
 ---
-mysql_root_pass: rootpassword
+mysql_root_pass: root
 db_pass_test: Mnbvcxz
 db_pass_second: Zxcvbnm

@@ -1,4 +1,4 @@
-Ansible MySQL database and users
+Ansible MySQL database and users [![Build Status](https://travis-ci.org/ewypych/mysql-db-user.png?branch=master)](https://travis-ci.org/ewypych/mysql-db-user)
 =========
 
 This role creates one or more MySQL databases and users with privileges for them.
